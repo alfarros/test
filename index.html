@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+  <!-- background video -->
+<video id="bg-video" preload="metadata" autoplay muted loop playsinline>
+  <source src="assets/videoplayback.mp4" type="video/mp4">
+</video>
+
+<div id="container" aria-live="polite">
+    <button id="btn" aria-label="Start surprise">Click me!</button>
+<div id="message"></div>
+
+<!-- jumpscare -->
+<div id="jumpscare">
+  <video id="jumpscare-video" preload="auto">
+    <source src="assets/jumpscare.mp4" type="video/mp4">
+  </video>
+</div>
+
+    <!-- custom container video -->
+    <div id="video-container" aria-hidden="true">
+      <video id="video" preload="auto" autoplay muted loop playsinline>
+        <source src="assets/a.mp4" type="video/mp4" />
+        Browser kamu tidak mendukung video.
+      </video>
+    </div>
+  </div>
+  
+  <!-- Background Music -->
+  <audio id="bg-music" src="assets/OUI.mp3" loop></audio>
+
+  <!-- confetti library (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
